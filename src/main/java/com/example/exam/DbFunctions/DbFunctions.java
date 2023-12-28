@@ -1,5 +1,6 @@
 package com.example.exam.DbFunctions;
 
+import com.example.exam.Recept;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -7,7 +8,7 @@ import java.sql.*;
 
 public class DbFunctions {
 
-    public Connection connect_to_db() {
+    public static Connection connect_to_db() {
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
@@ -77,6 +78,25 @@ public class DbFunctions {
             return 404;
         }
         return 201;
+    }
+
+    public ObservableList<Recept> getAllRecepts() {
+        ObservableList<Recept> users = FXCollections.observableArrayList();
+        try {
+            ResultSet resultSet = connect_to_db().createStatement().executeQuery("select id, name, sostav, author from recepts");
+            while (resultSet.next()) {
+                users.add(new Recept(
+                        resultSet.getString("id"),
+                        resultSet.getString("name"),
+                        resultSet.getString("sostav"),
+                        resultSet.getString("author")
+                ));
+            }
+            return users;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return users;
+        }
     }
 
 

@@ -4,13 +4,8 @@ public class SingletonUser {
     private static SingletonUser instance;
 
     private static String id;
-    private static String surname;
-    private static String name;
-    private static String lastname;
-
     private static String login;
     private static String password;
-
 
     public static synchronized SingletonUser getInstance() {
         if (instance == null) {
@@ -18,8 +13,6 @@ public class SingletonUser {
         }
         return instance;
     }
-
-
 
     public static String getId() {
         return id;
