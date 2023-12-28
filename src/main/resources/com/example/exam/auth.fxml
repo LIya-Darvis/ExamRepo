@@ -9,15 +9,15 @@
 
 <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exam.Controller.AuthController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #7065ff;" />
-      <Label fx:id="registrateLbl" layoutX="331.0" layoutY="360.0" text="Нет аккаунта? Зарегистрируйтесь!" textFill="#8682d7">
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #bf1520;" />
+      <Label fx:id="registrateLbl" layoutX="331.0" layoutY="360.0" text="Нет аккаунта? Зарегистрируйтесь!" textFill="#bf1520">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
       <TextField fx:id="loginField" layoutX="349.0" layoutY="130.0" prefHeight="33.0" prefWidth="195.0" promptText="Логин" stylesheets="@styles/textfield.css" />
-      <Button fx:id="btnSignIn" layoutX="349.0" layoutY="241.0" mnemonicParsing="false" prefWidth="195.0" stylesheets="@styles/button.css" text="Войти" />
-      <Label layoutX="363.0" layoutY="35.0" text="Авторизация" textFill="#8682d7">
+      <Button fx:id="btnSignIn" layoutX="349.0" layoutY="241.0" mnemonicParsing="false" prefWidth="195.0" style="-fx-background-color: #bf1520;" stylesheets="@styles/button.css" text="Войти" />
+      <Label layoutX="363.0" layoutY="35.0" text="Авторизация" textFill="#bf1520">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>

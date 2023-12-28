@@ -64,30 +64,18 @@ public class AuthController {
             alert.setContentText("Не найден аккаунт");
             alert.showAndWait();
         } else {
-            if (Variables.ROLE_USER.equals("админ")) {
 
-                Stage stage = (Stage) btnSignIn.getScene().getWindow();
-                stage.close();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/exam/main.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                stage = new Stage();
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setTitle("Администратор");
-                stage.setScene(new Scene(root1));
-                stage.show();
-            } else {
-                Stage stage = (Stage) btnSignIn.getScene().getWindow();
-                stage.close();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/exam/main2.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                stage = new Stage();
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setTitle("Клиент");
-                stage.setScene(new Scene(root1));
-                stage.show();
-            }
+            Stage stage = (Stage) btnSignIn.getScene().getWindow();
+            stage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/exam/main.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Клиент");
+            stage.setScene(new Scene(root1));
+            stage.show();
+
         }
-
 
 
     }
