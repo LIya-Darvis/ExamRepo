@@ -11,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class RegistrateController {
     @FXML
-    private TextField surname, lastname, login, name, password;
+    private TextField login, password;
 
     @FXML
     private Button registrate;
@@ -25,6 +25,9 @@ public class RegistrateController {
     @FXML
     void initialize() {
         registrate.setOnAction(e -> validation_create());
+        password.textProperty().addListener((observable, oldValue, newValue) -> {
+            password.setText(newValue.replaceAll("[^a-zA-Z0-9]", ""));
+        });
         signIn.setOnMouseClicked(e -> {
             new HelloApplication().openNewScene(pane, "/com/example/exam/auth.fxml", "Авторизация");
         });
@@ -37,6 +40,10 @@ public class RegistrateController {
         if (s_login.isEmpty() || s_password.isEmpty()) {
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Заполните пустые поля");
+            alert.showAndWait();
+        } else if (s_password.length() < 8) {
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Длина пароля меньше 8");
             alert.showAndWait();
         } else if (codeError == 0) {
             alert = new Alert(Alert.AlertType.INFORMATION);
