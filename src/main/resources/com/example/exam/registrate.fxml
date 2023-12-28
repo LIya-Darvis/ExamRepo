@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exam.Controller.RegistrateController">
    <children>
       <AnchorPane layoutX="307.0" prefHeight="400.0" prefWidth="293.0" style="-fx-background-color: #7065ff;" />
@@ -15,9 +14,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="surname" layoutX="75.0" layoutY="93.0" prefHeight="27.0" prefWidth="150.0" promptText="Фамилия" stylesheets="@styles/textfield.css" />
-      <TextField fx:id="name" layoutX="75.0" layoutY="136.0" prefHeight="27.0" prefWidth="150.0" promptText="Имя" stylesheets="@styles/textfield.css" />
-      <TextField fx:id="lastname" layoutX="75.0" layoutY="180.0" prefHeight="27.0" prefWidth="150.0" promptText="Отчество" stylesheets="@styles/textfield.css" />
       <TextField fx:id="login" layoutX="75.0" layoutY="220.0" prefHeight="27.0" prefWidth="150.0" promptText="Логин" stylesheets="@styles/textfield.css" />
       <TextField fx:id="password" layoutX="75.0" layoutY="264.0" prefHeight="27.0" prefWidth="150.0" promptText="Пароль" stylesheets="@styles/textfield.css" />
       <Button fx:id="registrate" layoutX="71.0" layoutY="317.0" mnemonicParsing="false" stylesheets="@styles/button.css" text="Зарегистрироваться" />

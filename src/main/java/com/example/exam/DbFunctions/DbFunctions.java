@@ -25,8 +25,7 @@ public class DbFunctions {
     }
 
 
-    public void createUser(String surname, String name, String lastname,
-                           String login, String password, String role) {
+    public void createUser(String login, String password) {
         try {
             String query = String.format("insert into users (login, password) " +
                             "values('%s', '%s');",
